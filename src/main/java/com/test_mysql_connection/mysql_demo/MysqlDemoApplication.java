@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
-@EnableJpaAuditing
-@EntityScan("com.test_mysql_connection.mysql_demo.entity")
+//@EnableJpaAuditing
+//@EntityScan("com.test_mysql_connection.mysql_demo.entity")
 public class MysqlDemoApplication {
 
 	public static void main(String[] args) {
