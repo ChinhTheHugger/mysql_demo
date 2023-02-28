@@ -37,8 +37,18 @@ public class CustomerAndApartmentServiceImplement implements CustomerAndApartmen
                         String apartment_building = String.valueOf(row.getCell(5));
                         String apartment_floor = String.valueOf(row.getCell(6));
                         String apartment_room = String.valueOf(row.getCell(7));
-                        CustomerAndApartment cusandap = CustomerAndApartment.builder().customer_id(customer_id).customer_name(customer_name).customer_phone(customer_phone).apartment_id(apartment_id).apartment_name(apartment_name).apartment_building(apartment_building).apartment_floor(apartment_floor).apartment_room(apartment_room).build();
-                        CusAndAp.add(cusandap);
+//                        CustomerAndApartment cusandap = CustomerAndApartment.builder().customer_id(customer_id).customer_name(customer_name).customer_phone(customer_phone).apartment_id(apartment_id).apartment_name(apartment_name).apartment_building(apartment_building).apartment_floor(apartment_floor).apartment_room(apartment_room).build();
+                        CustomerAndApartment customerAndApartment = new CustomerAndApartment(
+                                customer_id,
+                                customer_name,
+                                customer_phone,
+                                apartment_id,
+                                apartment_name,
+                                apartment_building,
+                                apartment_floor,
+                                apartment_room
+                        );
+                        CusAndAp.add(customerAndApartment);
                     }
                 }
                 catch (Exception e) {
